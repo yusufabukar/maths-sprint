@@ -99,10 +99,7 @@ function scoresToDOM() {
 };
 
 function checkTime() {
-	console.log('Time Played', timePlayed);
-
-	if (playerGuesses.length === questionAmount) {
-		console.log('Player Guesses', playerGuesses);
+if (playerGuesses.length === questionAmount) {
 		clearInterval(timer);
 
 		equationsArray.forEach((equation, i) => {
@@ -116,8 +113,6 @@ function checkTime() {
 		finalTime = timePlayed + penaltyTime;
 		scoresToDOM();
 	};
-
-	console.log('Time Played', timePlayed, 'Penalty', penaltyTime, 'Final', finalTime);
 };
 
 function addTime() {
@@ -153,8 +148,6 @@ function getRandomInteger(max) {
 function createEquations() {
 	const rightEquations = getRandomInteger(questionAmount);
 	const wrongEquations = questionAmount - rightEquations;
-
-	console.log('Correct', rightEquations, 'Incorrect', wrongEquations);
 
 	for (let i = 0; i < rightEquations; i++) {
 		firstNumber = getRandomInteger(9);
